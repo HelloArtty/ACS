@@ -1,0 +1,58 @@
+/*
+--1
+CREATE TABLE employee(
+	id INT,
+  	name TEXT,
+  	salary INT,
+  	job TEXT
+);
+
+INSERT INTO 'employee' ('id', 'name', 'salary', 'job') VALUES
+('00001','Lalita Suriya','25000','Developer'),
+('00002','Somsak Somporn','42500','UX/UI Designer'),
+('00003','Siriporn Amporn','35000','Developer'),
+('00004','Lalita Somsak','50000','UX/UI Designer'),
+('00005','Preecha Kamon','55000','Frontend Developer'),
+('00006','Preecha Kanya','27500','Backend Developer'),
+('00007','Somporn Thaksin','30000','UX/UI Designer'),
+('00008','Sunan Intira','20000','Frontend Developer'),
+('00009','Kanda Ratree','23500','Developer'),
+('00010','Klahan Suchart','20000','Fullstack Developer'),
+('00011','Sukhon Intira','60000','Data scientist'),
+('00012','Wattana Somboon','30000','Data scientist'),
+('00013','Lalita Thaksin','55000','DevOps'),
+('00014','Somchai Malai','43500','Data analytics'),
+('00015','Mali Amporn','60000','Developer'),
+('00016','Pranee Porntip','25000','DevOps'),
+('00017',' Somporn Prasert','35000','Web Developer'),
+('00018','Mongkut Arum','20000','Frontend Developer'),
+('00019','Pranee Wattana','45000','Backend Developer');
+
+SELECT * FROM employee;
+SAVEPOINT SP1;
+
+--2
+UPDATE employee SET job = 'DevOps Engineer' WHERE  job = 'DevOps';
+SELECT * FROM employee;
+SAVEPOINT SP2;
+
+--3
+DELETE FROM employee WHERE job = 'Data scientist';
+SELECT * FROM employee WHERE job = 'Data scientist';
+
+
+--4.1
+SELECT * FROM employee WHERE salary > 50000 or job = 'Developer';
+
+--4.2
+SELECT * FROM employee ORDER BY  salary ASC;
+
+--4.3
+SELECT * FROM employee  WHERE name LIKE 'S%';
+
+--4.4
+SELECT * FROM employee WHERE salary > 30000 AND job = 'Developer';
+*/
+
+
+
