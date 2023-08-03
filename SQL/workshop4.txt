@@ -540,3 +540,4 @@ ALTER TABLE Special RENAME to job_table_by_art;
 */
 
 --8
+SELECT * FROM Special WHERE gender LIKE 'M%' AND salary >86000 AND salary < 130000 ORDER BY salary DESC;
