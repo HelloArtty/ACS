@@ -1,10 +1,11 @@
-def find_minimum(numbers):
-    min_num = numbers[0]
-    for i in numbers:
-        if i < min_num:
-            min_num = i
-    return min_num
+def find_thing(list):
+    fruits = ['Apple','Banana','Orange','Mango','Strawberry']
+    vegetable = ['Carrot','Broccoli','Tomato','Spinach','Cucumber']
+    result = 0
+    for i in range(len(list)):
+        if list[i] in vegetable:
+            result += 1
+    return result
 
-my_list = [5, 0, 5, 6, 6, 4]
-minimum_number = find_minimum(my_list)
-print(minimum_number)
+list = ['Apple','Banana','Broccoli','Cucumber','Mango','Strawberry']
+print(find_thing(list))

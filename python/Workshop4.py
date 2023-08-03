@@ -1,23 +1,29 @@
-#1
+def group_fruits_and_vegetables(items_list):
 
-def reverseString(s):
-    new_String = ''
-    for i in range(len(s)- 1, -1, -1):
-        new_String += s[i] 
-    return new_String
+    fruits = [ ]
+    vegetables = []
+    for item in items_list:
+        if is_fruit(item):
+            fruits.append(item)
+        elif is_vegetable(item):
+            vegetables.append(item)
+        else:
+            print("Warning: 'shoes' is neither a fruit nor a vegetable!")
 
-my_String = 'etuc os uoy'
-my_String = reverseString(my_String)  
-print(my_String)
+    grouped_dict = {
+                'fruits': fruits,
+                'vegetables': vegetables
+    }
 
+    return grouped_dict
 
+def is_fruit(item):
+    fruits_list = ['apple','banana','orange','mango','strawberry']
+    return item.lower() in fruits_list
 
-#2
+def is_vegetable(item):
+    vegetables_list = ['carrot','broccoli','tomato','spinach','cucumber']
+    return item.lower() in vegetables_list
 
-def reverseString(s):
-    new_string = s[::-1]
-    return new_string
-
-my_String = 'etuc os uoy'
-my_String = reverseString(my_String)  
-print(my_String)
+items_list = ['Apple','Banana','Orange','Mango','shoes','Carrot','Broccoli','Tomato','Spinach']
+print(group_fruits_and_vegetables(items_list))

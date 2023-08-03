@@ -1,19 +1,4 @@
-#1
-
-def draw_diamond(x):
-    for i in range(x):
-        if i <= x//2:
-            print(' '*(x//2-i)+'#'*(2*i+1))
-        else:
-            print(' '*(i-x//2)+'#'*(2*(x-i)-1))
-    return ''
-print(draw_diamond(7))
-
-
-
-#2
-
-def draw_diamond(x):
-    return '\n'.join([' '*(x//2-i)+'#'*(2*i+1) if i <= x//2 else ' '*(i-x//2)+'#'*(2*(x-i)-1) for i in range(x)])
-
-print(draw_diamond(9))
+def isPalindrome(x):
+    x_str = str(x)
+    return  x_str == x_str[::-1]
+print(isPalindrome(12321))
